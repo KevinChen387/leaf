@@ -1,0 +1,21 @@
+/* for buttons */
+
+a > button {
+  width:300;
+  height:50;
+  border-radius:12.5px;
+}
+a {
+  text-decoration:none;
+}
+a > button > font {
+  font-size:18;
+  font-family: product sans, Georgia;
+  color:#0000CC;
+}
+
+@media (prefers-color-scheme: dark) {
+  button {
+    border:#000000;
+  }
+}
