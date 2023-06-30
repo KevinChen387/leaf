@@ -1,0 +1,118 @@
+<html>
+  <head>
+
+    <title>Calendar</title>
+
+    <!--icon-->
+    <link rel="icon" href="images/leaf.ico" />
+
+    <meta charset="UTF-8" />
+
+    <!--Javascript-->
+    <script src="js/head.js"></script>
+    <script src="js/dateinfo.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style/button.css" />
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color:#000000;
+          color:#FFFFFF;
+        }
+
+        button {
+          border:#000000;
+        }
+
+        .kcDate {
+          color:#FFCC00;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .kcDate {
+          color:#0000FF;
+        }
+      }
+
+      body {
+        text-align:left;
+      }
+      
+      .date {
+        font-family:product sans;
+      }
+
+      input {
+        width:150;
+        height:25;
+        border-radius:25px;
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <br/><br/><br/>
+
+    <h1>Calendar</h1>
+    <hr/>
+    
+    <h2>Today</h2>
+    <pre class="date">
+<script>
+today();
+</script>
+    </pre>
+
+    <!--Get Date Info-->
+    <h2>Date Info</h2>
+
+    <pre>
+1 <span class="kcDate">KAD</span> : 2020-01-18
+1 <span class="kcDate">KBD</span> : 2021-01-21
+1 <span class="kcDate">KCD</span> : 2020-06-02
+1 <span class="kcDate">WAD</span> : 2021-09-01
+    </pre>
+
+    <pre>
+      <form>
+<span style="font-family:product sans">Get by date</span>
+
+<input type="date" name="date" />
+<input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+  onclick="getDateInfo(date.value)"
+/>
+      </form>
+      <form>
+<span style="font-family:product sans">Get by KAD</span>
+
+<input type="number" name="date" />
+<input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+  onclick="getByKAD(date.value)"
+/>
+      </form>
+    </pre>
+
+    <p>
+      <a href="kad_list.txt" style="text-decoration:none">
+        <button style="width:300; height:50; border-radius:12.5px; background-color:#00BBFF">
+          <font color="#0000CC" size="4">View KAD list</font>
+        </button>
+      </a>
+    </p>
+    
+    <!--Go back-->
+    <p>
+      <a href="index.html" style="text-decoration:none">
+        <button style="width:300; height:50; border-radius:12.5px; background-color:#00BBFF">
+          <font color="#0000CC" size="4">Go back to main page</font>
+        </button>
+      </a>
+    </p>
+
+  </body>
+</html>
