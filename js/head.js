@@ -31,7 +31,7 @@ document.write(`
 }
 
 body {
-    font-family: product sans, Georgia;
+    font-family: product sans;
 }
 </style>
 
