@@ -7,6 +7,7 @@
     <link rel="icon" href="images/leaf.ico" />
 
     <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
 
     <!--Javascript-->
     <script src="js/head.js"></script>
@@ -14,6 +15,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="style/button.css" />
+    <link rel="stylesheet" type="text/css" href="style/mono_font.css" />
     <style>
       @media (prefers-color-scheme: dark) {
         body {
@@ -50,7 +52,6 @@
         border-radius:25px;
       }
     </style>
-
   </head>
 
 
@@ -71,7 +72,7 @@ today();
     <!--Get Date Info-->
     <h2>Date Info</h2>
 
-    <pre>
+    <pre style="font-family:mono">
 1 <span class="kcDate">KAD</span> : 2020-01-18
 1 <span class="kcDate">KBD</span> : 2021-01-21
 1 <span class="kcDate">KCD</span> : 2020-06-02
@@ -87,7 +88,7 @@ today();
   onclick="getDateInfo(date.value)"
 />
       </form>
-      <form>
+      <form onkeydown="if (window.event.keyCode == 13) {return false;}">
 <span style="font-family:product sans">Get by KAD</span>
 
 <input type="number" name="date" />
@@ -95,6 +96,15 @@ today();
   onclick="getByKAD(date.value)"
 />
       </form>
+      <form onkeydown="if (window.event.keyCode == 13) {return false;}">
+<span style="font-family:product sans">Get by WAD</span>
+
+<input type="number" name="date" />
+<input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+  onclick="getByWAD(date.value)"
+/>
+      </form>
+
     </pre>
 
     <p>

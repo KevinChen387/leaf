@@ -1,6 +1,10 @@
-with open("kad_list.txt", "w") as f:
-    end_year = 2030   # >= 2020
+# for creating 'kad_list.txt'
 
+
+# set end year here: (>= 2020)
+end_year = 2030
+
+with open("kad_list.txt", "w") as f:
     f.write("KAD List\nKAD = LAST MONTH + DATE NUMBER\n\n")
     m = 1
     y = 2020
@@ -12,7 +16,9 @@ with open("kad_list.txt", "w") as f:
             else:
                 kad += 31
         if m == 2:
-            if (y % 4 == 0 and y % 100 != 0 or y % 400 == 0):
+            if ((y % 4 == 0)
+            and (y % 100 != 0)
+            or (y % 400 == 0)):
                 kad += 29
             else:
                 kad += 28
@@ -21,7 +27,8 @@ with open("kad_list.txt", "w") as f:
         if m in [4, 6, 9, 11]:
             kad += 30
 
-        f.write("%d-%s: %d\n" % (y, str(m).zfill(2), kad))
+        f.write("%d-%s: %d\n" 
+        % (y, str(m).zfill(2), kad))
         
         m += 1
         if m == 13:
