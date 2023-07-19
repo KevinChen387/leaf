@@ -1,6 +1,4 @@
-/* for buttons */
-
-a > button {
+button {
   width:300;
   height:50;
   border-radius:12.5px;
@@ -10,7 +8,7 @@ a {
 }
 a > button > font {
   font-size:18;
-  font-family: product sans, Georgia;
+  font-family: product sans;
   color:#0000CC;
 }
 
