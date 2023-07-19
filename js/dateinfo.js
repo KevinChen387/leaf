@@ -106,6 +106,25 @@ ${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}`
 }
 
 
+function getByWAD(wad) {
+    if (wad > 0 && wad % 1 == 0) {
+        let date = new Date(2021, 8, 1);
+        date.setDate(date.getDate() + Number(wad) - 1);
+
+        let y = date.getFullYear();
+        let m = date.getMonth() + 1;
+        let d = date.getDate();
+
+        alert(
+`${wad} WAD
+${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}`
+        );
+    } else {
+        alert("WAD must be a positive integer.")
+    }
+}
+
+
 function today() {
     let now = new Date();
     let yearNumber = now.getFullYear();
@@ -124,7 +143,7 @@ function today() {
     document.write(
 `${day}, <strong>${month} ${dateNumber}</strong>, ${yearNumber}
 ${yearNumber}-${monthNumber >= 10 ? monthNumber : "0" + monthNumber}-${dateNumber >= 10 ? dateNumber : "0" + dateNumber}
-${kad} KAD
-${wad} WAD`
+${kad} <i>KAD</i>
+${wad} <i>WAD</i>`
     );
 }
