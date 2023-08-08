@@ -51,6 +51,13 @@
         height:25;
         border-radius:25px;
       }
+
+      #getdateinfo,
+      #getbykad,
+      #getbywad {
+        font-family:mono;
+        font-size:13px;
+      }
     </style>
   </head>
 
@@ -79,33 +86,54 @@ today();
 1 <span class="kcDate">WAD</span> : 2021-09-01
     </pre>
 
-    <pre>
+    <p>
       <form>
-<span style="font-family:product sans">Get by date</span>
+        <span style="font-family:product sans">Get by date: </span>
 
-<input type="date" name="date" />
-<input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
-  onclick="getDateInfo(date.value)"
-/>
+        <input type="date" name="date" />
+        <input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+          onclick="document.getElementById('getdateinfo').innerHTML = getDateInfo(date.value)"
+        />
+        <input type="button" value="Clean" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+          onclick="document.getElementById('getdateinfo').innerHTML = ''"
+        />
+
+        <br/>
+        <span id="getdateinfo"></span>
       </form>
+
       <form onkeydown="if (window.event.keyCode == 13) {return false;}">
-<span style="font-family:product sans">Get by KAD</span>
+        <span style="font-family:product sans">Get by KAD: </span>
 
-<input type="number" name="date" />
-<input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
-  onclick="getByKAD(date.value)"
-/>
+        <input type="number" name="date" />
+        <input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+          onclick="document.getElementById('getbykad').innerHTML = getByKAD(date.value)"
+        />
+        <input type="button" value="Clean" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+          onclick="document.getElementById('getbykad').innerHTML = ''"
+        />
+
+        <br/>
+        <span id="getbykad"></span>
       </form>
+
       <form onkeydown="if (window.event.keyCode == 13) {return false;}">
-<span style="font-family:product sans">Get by WAD</span>
+        <span style="font-family:product sans">Get by WAD: </span>
 
-<input type="number" name="date" />
-<input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
-  onclick="getByWAD(date.value)"
-/>
+        <input type="number" name="date" />
+        <input type="button" value="Get Date Info" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+          onclick="document.getElementById('getbywad').innerHTML = getByWAD(date.value)"
+        />
+        <input type="button" value="Clean" style="background-color:#0066FF; color:#FFFFFF; font-family:product sans"
+          onclick="document.getElementById('getbywad').innerHTML = ''"
+        />
+
+        <br/>
+        <span id="getbywad"></span>
       </form>
+    </p>
 
-    </pre>
+    <br/><br/>
 
     <p>
       <a href="kad_list.txt" style="text-decoration:none">
