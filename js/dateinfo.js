@@ -76,14 +76,12 @@ function getDateInfo(dateString) {
     let m = date.getMonth() + 1;
     let d = date.getDate();
 
-    alert(
-`${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}
-
-${kad} KAD
-${kbd} KBD
-${kcd} KCD
-${wad} WAD`
-    );
+    return `&emsp;${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}
+<br/><br/>
+&emsp;${kad} KAD<br/>
+&emsp;${kbd} KBD<br/>
+&emsp;${kcd} KCD<br/>
+&emsp;${wad} WAD`;
 }
 
 
@@ -96,12 +94,15 @@ function getByKAD(kad) {
         let m = date.getMonth() + 1;
         let d = date.getDate();
 
-        alert(
-`${kad} KAD
-${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}`
-        );
+        if (Object.is(y, NaN) || Object.is(m, NaN) || Object.is(d, NaN)) {
+            return "&emsp; Unable to calculate";
+        }
+
+        return `&emsp;${kad} KAD
+            &emsp;<br/>
+            &emsp;${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}`;
     } else {
-        alert("KAD must be a positive integer.")
+        return "&emsp;KAD must be a positive integer";
     }
 }
 
@@ -115,12 +116,15 @@ function getByWAD(wad) {
         let m = date.getMonth() + 1;
         let d = date.getDate();
 
-        alert(
-`${wad} WAD
-${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}`
-        );
+        if (Object.is(y, NaN) || Object.is(m, NaN) || Object.is(d, NaN)) {
+            return "&emsp; Unable to calculate";
+        }
+
+        return `&emsp;${wad} WAD
+            &emsp;<br/>
+            &emsp;${y}-${m >= 10 ? m : "0" + m}-${d >= 10 ? d : "0" + d}`;
     } else {
-        alert("WAD must be a positive integer.")
+        return "WAD must be a positive integer";
     }
 }
 

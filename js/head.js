@@ -28,8 +28,13 @@ document.write(`
     font-style: italic;
 }
 
+@font-face {
+    font-family:Calibri;
+    src: url("/fonts/calibri.ttf") format("truetype");
+}
+
 body {
-    font-family: product sans;
+    font-family: Product Sans;
 }
 </style>
 
