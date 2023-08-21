@@ -145,7 +145,7 @@ function today() {
     let day = DAY[dayNumber];
 
     document.write(
-`${day}, <strong>${month} ${dateNumber}</strong>, ${yearNumber}
+`${day}, <strong>${dateNumber} ${month} ${yearNumber}</strong>
 ${yearNumber}-${monthNumber >= 10 ? monthNumber : "0" + monthNumber}-${dateNumber >= 10 ? dateNumber : "0" + dateNumber}
 ${kad} <i>KAD</i>
 ${wad} <i>WAD</i>`
