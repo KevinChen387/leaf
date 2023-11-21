@@ -1,40 +1,19 @@
 document.write(`
 <style>
 @font-face {
-    font-family: product sans;
-    src: url("/fonts/product_sans/Product-Sans-Regular-2.ttf") format("truetype");
+    font-family: Arizona;
+    src: url("/fonts/Arizona/ABCArizonaPlus.en.woff2") format("woff2");
     font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
-    font-family: product sans;
-    src: url("/fonts/product_sans/Product-Sans-Bold-3.ttf") format("truetype");
+    font-family: Arizona;
+    src: url("/fonts/Arizona/ABCArizonaPlusVariable.en.woff2") format("woff2");
     font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: product sans;
-    src: url("/fonts/product_sans/Product-Sans-Italic-4.ttf") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: product sans;
-    src: url("/fonts/product_sans/Product-Sans-Bold-Italic-5.ttf") format("truetype");
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family:Calibri;
-    src: url("/fonts/calibri.ttf") format("truetype");
 }
 
 body {
-    font-family: Product Sans;
+    font-family: Arizona;
 }
 </style>
 
