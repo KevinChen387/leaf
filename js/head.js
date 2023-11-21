@@ -20,7 +20,7 @@ body {
 <!--Quick visit-->
 <p>
     <div size="4" style="float:left">
-        <img src="images/leaf.svg" width="15" height="15" /> Leaf!
+        <img src="images/leaf.svg" width="20" height="20" />
     </div>
 
     <div style="float:right">
